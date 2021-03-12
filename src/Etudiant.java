@@ -15,6 +15,8 @@ public class Etudiant {
 	
 	private List<Godzilla> godzillas;
 	
+	private List<Cochon> cochons;
+	
 	public Etudiant(String Nom, String Prenom, int age, String libelle) {
 		this.Nom = Nom;
 		this.Prenom = Prenom;
@@ -23,6 +25,7 @@ public class Etudiant {
 		
 		this.chiens = new ArrayList<>();
 		this.godzillas = new ArrayList<>();
+		this.cochons = new ArrayList<>();
 	}
 	
 	
@@ -33,6 +36,9 @@ public class Etudiant {
 		}
 		for (int i = 0 ; i <godzillas.size() ; i++) {
 			godzillas.get(i).sePrésenter();
+		}
+		for (int i = 0 ; i <cochons.size() ; i++) {
+			cochons.get(i).sePrésenter();
 		}
 	}
 	
@@ -50,5 +56,13 @@ public class Etudiant {
 	
 	public void retirerGodzilla(int numeroGodzilla) {
 		godzillas.remove(numeroGodzilla);
+	}
+	
+	public void ajouterCochon(Cochon cochon) {
+		cochons.add(cochon);
+	}
+	
+	public void retirerCochon(int numeroCochon) {
+		cochons.remove(numeroCochon);
 	}
 }
