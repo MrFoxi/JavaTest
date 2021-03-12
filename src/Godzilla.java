@@ -1,21 +1,13 @@
 
-public class Godzilla {
-	public int taille;
+public class Godzilla extends Animal {
 	
-	public int age;
+	private String couleur;
 	
-	public String Nom;
-	
-	public String Attaque;
-	
-	public Godzilla(int taille, int age, String Nom, String Attaque) {
-		this.taille = taille;
-		this.age = age;
-		this.Nom = Nom;
-		this.Attaque = Attaque;
+	public Godzilla(int taille, int age, String nom, String espece, String couleur) {
+		super(taille, age, nom, espece);
+		this.couleur = couleur;
 	}
-	
-	public void sePrésenter() {
-		System.out.println("Bonjour, je suis "+ Nom + " j'ai " + age + " ans, je fais " + taille + "m et j'attaque en faisant des "+ Attaque +".");
+	 public void sePrésenter() {
+			System.out.println("Bonjour, je m'appelle " + nom + " j'ai " + age + " ans, je fais " + taille + "m et je suis un " + espece);
 	}
 }
